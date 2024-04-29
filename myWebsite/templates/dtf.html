@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-4 fw-bold text-body-emphasis">Your DTF</h1>
+    <div class="col-lg-5 mx-auto">
+      <p class="lead mb-4">CHOICE YOUR DTF</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      </div>
+    </div>
+</div>
+    <ul class ="list-group">
+        {% for post in posts %}
+            <li class ="list-group-item"><a href="#">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
