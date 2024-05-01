@@ -24,5 +24,9 @@ def yourdtf():
 def page():
     return render_template('page.html')
 
+@app.route('/posts/<string:id>/')
+def posts(id):
+    return render_template('post.html',id=id)
+
 if __name__== '__main__':
     app.run(debug=True)
